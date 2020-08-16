@@ -1,0 +1,144 @@
+.events-section {
+  background-color: $secondary-color;
+  color: $text__light;
+  width: 100%;
+  padding: 0 1.5em 3em 1.5em;
+  @include flex($dir: column, $align: center, $justify: center);
+
+  .events-header {
+    width: 100%;
+    text-align: center;
+    padding: 2.5em 0 1em 0;
+    @include flex($align: center, $justify: center);
+  }
+  .event-item {
+    width: 100%;
+    margin: .5em 0;
+    color: $text__light;
+    padding-right: 1em;
+    background-color: lighten($secondary-color, 5%);
+    height: 5em;
+    @include flex($justify: flex-start);
+    box-shadow: 0 1px 3px 0 black;
+
+    &:hover {
+      background-color: lighten($secondary-color, 10%);
+      color: $text__light;
+      text-decoration: none;
+    }
+    .event-date {
+      background-color: $primary-color__transparent;
+      color: $text__light;
+      width: 8em;
+      height: 5em;
+      @include flex($dir: column, $align: center, $justify: center);
+
+      .day {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 3em;
+        letter-spacing: 0;
+        font-family: "josefin sans";
+        font-weight: 300;
+        line-height: .75em;
+      }
+      .month {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.25em;
+        line-height: .75em;
+        font-weight: bold;
+        font-family: "carme";
+      }
+    }
+    .event-title {
+      margin: 0;
+      margin-left: 1em;
+      min-height: 2.5em;
+      width: 100%;
+      font-size: 1.1em;
+      font-family: "josefin sans";
+      letter-spacing: .05em;
+      @include flex($align: center);
+    }
+  }
+  .active-event {
+      position: relative;
+    }
+  .event-countdown {
+    @include flex($align: flex-end, $justify: center);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-family: "josefin sans";
+    font-size: 1em;
+    color: $primary-color;
+    margin: 0;
+    padding: 0 .75em;
+    font-style: italic;
+  }
+  .btn {
+    margin-top: 2em;
+    background-color: transparent;
+    border: 2px solid $text__light;
+    border-radius: 0;
+    &:hover {
+      border: 2px solid $primary-color__transparent;
+      color: $primary-color__transparent;
+    }
+  }
+  @include medium-devices {
+    @include flex($align: flex-start, $justify: space-evenly, $wrap: wrap);
+
+    .events-header {
+      padding: 4em 0 3em 0;
+    }
+
+    .event-item {
+      width: 150px;
+      height: 200px;
+      padding: 0;
+      margin: 1em;
+      @include flex($dir: column, $align: center, $justify: flex-start);
+
+      .event-date {
+        width: 100%;
+        margin: 0;
+      }
+      .event-title {
+        text-align: center;
+        margin: 0;
+        padding: 1em;
+      }
+    }
+    .active-event {
+      position: relative;
+      width: 175px;
+      height: 225px;
+    }
+    .event-countdown {
+      @include flex($align: center, $justify: center);
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      font-family: "josefin sans";
+      font-size: 1.3em;
+      color: $primary-color;
+      margin: 0;
+      padding: .25em 0;
+      font-style: italic;
+    }
+    .btn-container {
+      width: 100%;
+      margin: 2em 0 4em 0;
+      @include flex($justify: center);
+    }
+  }
+  @include large-devices {
+
+  }
+}

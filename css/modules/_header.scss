@@ -1,0 +1,184 @@
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  padding: 1em;
+  z-index: 1;
+  overflow: hidden;
+  @include flex($align: center, $justify: space-between);
+}
+.slackers-logo {
+  @include flex($dir: column);
+  min-width: 8em;
+  width: 10.5em;
+  max-width: 10.5em;
+  margin-right: 1em;
+
+  .slackers-logo-img {
+    width: 100%;
+    @include flex;
+  }
+  @include small-devices {
+    width: 12em;
+    max-width: 12em;
+    margin-left: 1em;
+  }
+}
+.site-header__main-nav {
+  position: relative;
+  @include flex;
+}
+#navUL {
+  list-style: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 0;
+  width: 100%;
+  background-color: $secondary-color;
+  overflow-x: hidden;
+  padding: 4.5em .5em 0 .5em;
+  border-bottom: 4px double $primary-color;
+  @include flex($display: none, $dir: column, $align: flex-end, $justify: flex-start);
+  @include animation(open, 1s);
+
+  li {
+    a {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-family: $subheading-font;
+      font-size: 1.5em;
+      letter-spacing: .15em;
+      padding: .5em 1em;
+      @include flex;
+
+      &:hover {
+        color: $primary-color;
+      }
+      &.active {
+        color: $primary-color;
+      }
+    }
+  }
+
+  @include large-devices {
+    position: initial;
+    height: 3em;
+    background-color: transparent;
+    overflow-x: initial;
+    padding: 0;
+    margin: 0;
+    border-bottom: none;
+    @include flex;
+    @include animation(none, 0);
+
+    li {
+      margin: 0;
+      height: 100%;
+
+      a {
+        font-weight: normal;
+        font-size: 1.3em;
+        letter-spacing: .1em;
+        padding: 0 1em;
+        line-height: 1em;
+        @include flex($align: center);
+      }
+    }
+  }
+}
+@keyframes open {
+  0% {height: 0; overflow-y: hidden;}
+  50% {overflow-y: hidden;}
+  100% {height: 100%;}
+}
+.btn__nav {
+  z-index: 2;
+  width: 2.5em;
+  height: 2.5em;
+  background-color: transparent;
+  padding: initial;
+  @include flex($dir: column, $align: center, $justify: center);
+
+  &:hover {
+    background-color: transparent;
+  }
+  .bar {
+    width: 22px;
+    height: 1.5px;
+    background-color: white;
+    margin: 3px 0;
+  }
+
+  @include large-devices {
+    display: none;
+  }
+}
+.mobile-animate .bar1 {
+  @include transform(45deg, 6px, 6px);
+  @include transition(transform, .5s);
+}
+.mobile-animate .bar2 {
+  width: 0%;
+  opacity: 0;
+}
+.mobile-animate .bar3 {
+  @include transform(-45deg, 4px, -5px);
+  @include transition(transform, .5s);
+}
+.site-header__social-icons {
+  width: 100%;
+  height: 100%;
+  padding: 3em 0;
+  @include flex($align: flex-end, $justify: flex-end);
+
+  a {
+    padding: 0;
+    width: fit-content;
+    height: fit-content;
+    color: $tertiary-color;
+    font-size: 1.5em;
+    @include flex($justify: flex-end);
+
+    &:hover {
+      color: $primary-color;
+    }
+    i {
+      padding: 0 1em;
+      @include flex($align: flex-end);
+    }
+  }
+  @include large-devices {
+    display: none;
+  }
+}
+.stickyBtns {
+  position: fixed;
+  top: .3em;
+  right: .3em;
+}
+.stickyBar {
+  position: fixed;
+  top: 0;
+  height: 2.5em;
+}
+.btn__scroll {
+  background-color: $secondary-color__transparent;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 2em;
+  height: 2em;
+  padding: initial;
+  @include flex($display: none, $align: center, $justify: center);
+
+  &:hover {
+    background-color: $secondary-color__transparent;
+  }
+}

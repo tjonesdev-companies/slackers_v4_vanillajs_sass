@@ -1,0 +1,105 @@
+.blog-section {
+  color: initial;
+  background-color: $bkgd__light;
+  width: 100%;
+  padding: 0 1.5em 2.5em 1.5em;
+  @include flex($dir: column, $align: center, $justify: center);
+
+  .blog-header {
+    color: $tertiary-color;
+    width: 100%;
+    text-align: center;
+    padding: 2.5em 0 1em 0;
+    @include flex($align: center, $justify: center);
+  }
+  .blog-post {
+    padding: 1.5em 1em;
+    background-color: white;
+    border-radius: 15px;
+    margin-bottom: 2em;
+    width: 100%;
+    box-shadow: 0 2px 4px 0 darken($bkgd__light, 5%);
+  }
+  .blog-post-header {
+    border-bottom: 3px double $primary-color;
+    margin-bottom: 1em;
+    @include flex($dir: column, $align: center, $justify: center);
+
+    .blog-post-header-heading {
+      text-align: center;
+
+      h3 {
+        color: $primary-color;
+        letter-spacing: 0;
+      }
+    }
+    .blog-info {
+      font-size: .8em;
+      margin: 1em 0;
+      @include flex($align: center, $justify: center, $wrap: wrap);
+
+      .blog-date {
+        margin-right: 1em;
+      }
+      .blog-category {
+        margin-left: 1em;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  i {
+    color: $primary-color;
+    padding-right: .3em;
+  }
+  p {
+    text-align: justify;
+
+    a {
+      color: $primary-color;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .blog-comments {
+    font-size: .8em;
+    @include flex($align: center, $justify: flex-end);
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+  .btn {
+    background-color: $primary-color;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+  @include medium-devices {
+    width: 100%;
+    padding: 1em;
+    @include flex($dir: row, $align: flex-start, $justify: space-evenly, $wrap: wrap);
+
+    .blog-container {
+      @include flex($justify: center);
+      padding: 1em 0 2em 0;
+    }
+    .blog-post {
+      padding: 1em;
+      margin: 0 1%;
+      width: 30%;
+    }
+    .btn-container {
+      width: 100%;
+      margin-top: 0;
+      @include flex($justify: center);
+    }
+  }
+  @include large-devices {
+
+  }
+}

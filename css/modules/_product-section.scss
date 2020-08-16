@@ -1,0 +1,73 @@
+.product-section {
+  width: 100%;
+  padding-top: 3em;
+  padding-bottom: .5em;
+  color: $text__light;
+  background-color: $secondary-color;
+  border-top: 4px double $primary-color;
+  @include flex($dir: column, $align: center, $justify: center);
+
+
+  @include medium-devices {
+    padding: 4em 0;
+    @include flex($dir: row, $align: center, $justify: center, $wrap: wrap);
+  }
+}
+.product-header {
+  width: 100%;
+  @include flex($justify: center);
+
+  h2 {
+    padding: .25em 0;
+    margin-bottom: 2em;
+    border-bottom: 2px solid $text__light;
+    width: fit-content;
+  }
+}
+.product-column {
+  width: 100%;
+  padding-bottom: 2em;
+  @include flex($dir: column, $align: center, $justify: center);
+
+  .product-banner {
+    width: 100%;
+    padding: 0;
+    height: fit-content;
+    @include flex($dir: column, $align: center, $justify: center);
+
+    i {
+      width: fit-content;
+      height: fit-content;
+      font-size: 4em;
+      color: rgba($primary-color, .5);
+    }
+    h3 {
+      padding: 0;
+      padding-top: .25em;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin: 0;
+    }
+  }
+
+  p {
+    text-align: justify;
+    margin: 1em 2em;
+    padding: 1em;
+    background-color: $primary-color__transparent;
+    box-shadow: 0 1px 3px 0 black;
+  }
+  @include medium-devices {
+    width: 33%;
+    padding: 0 .5em 3em .5em;
+    margin: auto;
+
+    p {
+      margin: 1em 0;
+    }
+  }
+  @include large-devices {
+    min-width: 225px;
+    width: 20%;
+  }
+}

@@ -1,0 +1,136 @@
+.locations-section {
+  width: 100%;
+  background-color: $bkgd__light;
+  height: fit-content;
+  padding-bottom: 4.5em;
+
+  .locations-header {
+    color: $tertiary-color;
+    width: 100%;
+    text-align: center;
+    padding: 2.5em 0 1em 0;
+    @include flex($align: center, $justify: center);
+  }
+  .locations-slider {
+    height: fit-content;
+    position: relative;
+    @include flex;
+  }
+  .location-arrows {
+    align-self: center;
+    position: absolute;
+    font-family: $arrow-font;
+    font-size: 2.5em;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    margin: 0 .1em;
+    color: white;
+    z-index: 1;
+    background-color: $secondary-color__transparent;
+    @include flex($align: center, $justify: center);
+
+    &:hover {
+      text-decoration: none;
+      color: white;
+    }
+  }
+  .slick-prev {
+    left: 0;
+  }
+  .slick-next {
+    right: 0;
+  }
+  .location-item {
+    background-color: white;
+    padding: 1em 1.5em;
+    margin: 1em;
+    height: fit-content;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px 0 darken($bkgd__light, 5%);
+
+    h4 {
+      color: $primary-color;
+      font-family: $subheading-font;
+      font-size: 1.6em;
+    }
+
+    .location-address {
+      padding: .5em 0;
+      @include flex;
+    }
+    .location-tel {
+      @extend .location-address;
+
+      i {
+        transform: rotate(90deg);
+        align-self: center;
+      }
+    }
+    i {
+      color: $primary-color;
+      width: 1em;
+      height: 1em;
+      @include flex($align: center, $justify: center);
+    }
+    a {
+      color: black;
+      margin-left: 1em;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .btn {
+      margin-top: 1em;
+      margin-bottom: .5em;
+      width: 100%;
+      padding: .5em;
+      @include flex($justify: center);
+    }
+  }
+  .slick-dots {
+    margin-top: 1em;
+    padding: 0;
+    @include flex($align: center, $justify: center);
+
+    li {
+      list-style: none;
+      width: 8px;
+      height: 8px;
+      background-color: $tertiary-color;
+      border-radius: 50%;
+      margin: 0 3px;
+      cursor: pointer;
+      font-size: 0;
+
+      &:hover {
+        background-color: $primary-color;
+      }
+      button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    .slick-active {
+      background-color: $primary-color;
+      width: 12px;
+      height: 12px;
+    }
+  }
+  @include medium-devices {
+    padding-bottom: 6em;
+    .locations-header {
+      padding: 4em 0 2em 0;
+    }
+  }
+  @include large-devices {
+
+  }
+}

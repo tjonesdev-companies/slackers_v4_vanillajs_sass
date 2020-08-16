@@ -1,0 +1,58 @@
+// Selectors
+body {
+  font-size: 16px;
+  font-family: $primary-font;
+  min-width: 300px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  @include flex($dir: column);
+}
+h1 {
+  font-family: $heading-font;
+  font-size: 2.25em;
+
+  @include large-devices {
+    font-size: 2.5em;
+  }
+}
+h2 {
+  font-size: 1.7em;
+  text-transform: uppercase;
+  font-family: $heading-font;
+
+  @include large-devices {
+    font-size: 2em;
+  }
+}
+h3 {
+  font-family: $subheading-font;
+  font-size: 1.6em;
+  letter-spacing: .1em;
+
+  @include large-devices {
+    font-size: 1.7em;
+  }
+}
+a {
+  color: black;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+// Classes
+.btn {
+  color: white;
+  background-color: $primary-color;
+  border: none;
+  padding: .75em;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}

@@ -1,0 +1,55 @@
+.main-carousel {
+  width: 100%;
+  min-height: 600px;
+  height: 100vh;
+
+  .carousel-item:after {
+    content:"";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    min-height: 600px;
+    height: 100vh;
+    background: rgba(black, 0.8);
+  }
+  .carousel-item img {
+    width: 100%;
+    min-height: 600px;
+    height: 100vh;
+    object-fit: cover;
+    position: relative;
+    @include flex;
+  }
+  .carousel-caption {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: auto;
+    height: fit-content;
+    margin: auto;
+    text-transform: uppercase;
+    @include flex($dir: column, $align: center, $justify: center);
+
+    h2 {
+      font-family: $subheading-font;
+      font-size: 1.9em;
+    }
+  }
+  .carousel-arrows {
+    margin: auto;
+    opacity: 1;
+    width: 3em;
+    height: fit-content;
+
+    &:focus {
+      outline: auto;
+    }
+    span {
+      font-size: 4em;
+      width: 1em;
+      height: 1.5em;
+      font-family: $arrow-font;
+      @include flex($align: center, $justify: center);
+    }
+  }
+}

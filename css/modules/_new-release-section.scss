@@ -1,0 +1,124 @@
+.new-release-section {
+  background-color: $secondary-color;
+  color: $text__light;
+  width: 100%;
+  padding: 0 1.5em 3em 1.5em;
+  @include flex($dir: column, $align: center, $justify: center);
+
+  .new-release-header {
+    width: 100%;
+    text-align: center;
+    padding: 2.5em 0 1em 0;
+    @include flex($align: center, $justify: center);
+  }
+  .new-release-column-header {
+    margin-bottom: 1em;
+    width: 100%;
+    border-bottom: 2px solid $primary-color;
+    padding: 1em 0;
+
+    h3 {
+      color: $primary-color;
+      font-size: 2em;
+      margin: 0;
+    }
+    h4 {
+      font-size: 1em;
+      margin: 0;
+    }
+  }
+  .new-release-column {
+    width: 100%;
+    padding-bottom: 1em;
+    @include flex($dir: column, $align: center, $justify: center);
+  }
+  .comic-column {
+    padding-bottom: 2em;
+  }
+  .new-release-content {
+    width: 100%;
+    @include flex($align: flex-start, $justify: space-around, $wrap: wrap);
+  }
+  .new-release-item {
+    width: 125px;
+    height: fit-content;
+    margin: .75em .1em;
+    padding: 1em 0;
+    box-shadow: 0 1px 3px 0 black;
+    background-color: lighten($secondary-color, 3%);
+    @include flex($dir: column, $align: center, $justify: center);
+
+    &:hover {
+      text-decoration: none;
+      background-color: $primary-color__transparent;
+    }
+    img {
+      width: 100px;
+      box-shadow: 0 1px 3px 0 black;
+    }
+    .new-release-desc {
+      text-align: center;
+      padding: 1em .5em 0 .5em;
+      @include flex($dir: column, $align: center, $justify: center);
+
+      h4 {
+        font-size: 1em;
+        margin: 0;
+        padding-bottom: .25em;
+        font-family: $primary-font;
+        text-transform: uppercase;
+        color: $text__light;
+      }
+      h5 {
+        font-size: .85em;
+        margin: 0;
+        color: $text__dark;
+      }
+    }
+  }
+  .btn {
+    margin-top: 1em;
+    background-color: transparent;
+    border-radius: 0;
+    border: 2px solid $text__light;
+    color: $text__light;
+
+    &:hover {
+      border: 2px solid $primary-color__transparent;
+      color: $primary-color__transparent;
+    }
+  }
+  @include medium-devices {
+    padding: 2.5em 4em 6em 4em;
+
+    .new-release-content {
+      width: 100%;
+      @include flex($align: flex-start, $justify: space-evenly, $wrap: wrap);
+    }
+    .new-release-item {
+      width: 175px;
+      margin: 1em 0;
+      padding: 1em 0;
+
+      img {
+        width: 75%;
+      }
+    }
+    .btn {
+      margin-top: 2em;
+    }
+  }
+  @include large-devices {
+    .new-release-column-header {
+      h3 {
+        font-size: 2.25em;
+      }
+      h4 {
+        font-size: 1.15em;
+      }
+    }
+    .new-release-item {
+      width: 200px;
+    }
+  }
+}

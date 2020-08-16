@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Slackers</title>
+  <link href="https://fonts.googleapis.com/css?family=Chelsea+Market|Gaegu|Lateef|Open+Sans|Josefin+Sans:300|Carme" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+
+<body>
+  <header id="siteHeader" class="site-header">
+    <a id="slackersLogo" class="slackers-logo" href="index.html">
+      <img class="slackers-logo-img" src="images/slackers-light.png" alt="Slackers Logo">
+    </a>
+    <nav class="site-header__main-nav">
+      <ul id="navUL">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Online Store</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+        <div class="site-header__social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </ul>
+
+      <button id="navBtn" class="btn btn__nav" role="button" onclick="mobileMenu(); mobileMenuAnimate(this);">
+        <div class="bar bar1"></div>
+        <div class="bar bar2"></div>
+        <div class="bar bar3"></div>
+      </button>
+    </nav>
+
+    <button id="scrollBtn" class="btn btn__scroll" onclick="scrollToTop();" role="button">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </header>
+
+  <div id="mainCarousel" class="main-carousel carousel slide" data-ride="carousel" data-interval="5000" data-pause="false">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/sample-img.jpg">
+        <div class="carousel-caption animated flipInX">
+          <h1>Welcome to Slackers!</h1>
+          <h2>We are the bomb.</h2>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/sample-img2.jpg">
+        <div class="carousel-caption animated flipInX">
+          <h1>This is a caption.</h1>
+          <h2>So cool.</h2>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/sample-img3.jpg">
+        <div class="carousel-caption animated flipInX">
+          <h1>New Weekly Releases!</h1>
+          <h2>Not really, though.</h2>
+        </div>
+      </div>
+      <a href="#mainCarousel" class="carousel-control-prev carousel-arrows" role="button" data-slide="prev">
+        <span>&lt;</span>
+      </a>
+      <a href="#mainCarousel" class="carousel-control-next carousel-arrows" role="button" data-slide="next">
+        <span>&gt;</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="product-section">
+    <div class="product-header">
+      <h2>We sell stuff.</h2>
+    </div>
+    <div class="product-column">
+      <div class="product-banner">
+        <i class="fas fa-headphones-alt"></i>
+        <h3>Music</h3>
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque efficitur tortor quis hendrerit volutpat. Etiam ut pellentesque mauris. Sed ligula turpis, scelerisque at blandit eget, pulvinar non velit. </p>
+    </div>
+    <div class="product-column">
+      <div class="product-banner">
+        <i class="fa fa-film"></i>
+        <h3>Movies</h3>
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque efficitur tortor quis hendrerit volutpat. Etiam ut pellentesque mauris. Sed ligula turpis, scelerisque at blandit eget, pulvinar non velit. </p>
+    </div>
+    <div class="product-column">
+      <div class="product-banner">
+        <i class="fas fa-gamepad"></i>
+        <h3>Games</h3>
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque efficitur tortor quis hendrerit volutpat. Etiam ut pellentesque mauris. Sed ligula turpis, scelerisque at blandit eget, pulvinar non velit. </p>
+    </div>
+    <div class="product-column">
+      <div class="product-banner">
+        <i class="fas fa-dice"></i>
+        <h3>Toys</h3>
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque efficitur tortor quis hendrerit volutpat. Etiam ut pellentesque mauris. Sed ligula turpis, scelerisque at blandit eget, pulvinar non velit. </p>
+    </div>
+    <div class="product-column">
+      <div class="product-banner">
+        <i class="fas fa-book-open"></i>
+        <h3>Comics</h3>
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque efficitur tortor quis hendrerit volutpat. Etiam ut pellentesque mauris. Sed ligula turpis, scelerisque at blandit eget, pulvinar non velit. </p>
+    </div>
+  </div>
+
+  <div class="service-section">
+    <div class="service-header">
+      <h2>We do stuff.</h2>
+    </div>
+    <div class="service-column">
+      <i class="fas fa-hand-holding-usd"></i>
+      <div class="service-content">
+        <h3>Buy &bull; Sell &bull; Trade</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque efficitur tortor quis hendrerit volutpat. Etiam ut pellentesque mauris. Sed ligula turpis, scelerisque at blandit eget, pulvinar non velit. </p>
+        <button role="button" class="btn">Learn More</button>
+      </div>
+    </div>
+    <div class="service-column">
+      <i class="fas fa-credit-card"></i>
+      <div class="service-content">
+        <h3>Powercard Membership</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque efficitur tortor quis hendrerit volutpat. Etiam ut pellentesque mauris. Sed ligula turpis, scelerisque at blandit eget, pulvinar non velit. </p>
+        <button role="button" class="btn">Learn More</button>
+      </div>
+    </div>
+    <div class="service-column">
+      <i class="fas fa-archive"></i>
+      <div class="service-content">
+        <h3>Comic Pull List</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque efficitur tortor quis hendrerit volutpat. Etiam ut pellentesque mauris. Sed ligula turpis, scelerisque at blandit eget, pulvinar non velit. </p>
+        <button role="button" class="btn">Learn More</button>
+      </div>
+    </div>
+    <div class="service-column">
+      <i class="fas fa-compact-disc"></i>
+      <div class="service-content">
+        <h3>Disc Resurfacing</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque efficitur tortor quis hendrerit volutpat. Etiam ut pellentesque mauris. Sed ligula turpis, scelerisque at blandit eget, pulvinar non velit. </p>
+        <button role="button" class="btn">Learn More</button>
+      </div>
+    </div>
+    <div class="service-column">
+      <i class="fas fa-car-battery"></i>
+      <div class="service-content">
+        <h3>Handheld Battery Replacement</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque efficitur tortor quis hendrerit volutpat. Etiam ut pellentesque mauris. Sed ligula turpis, scelerisque at blandit eget, pulvinar non velit. </p>
+        <button role="button" class="btn">Learn More</button>
+      </div>
+    </div>
+    <div class="service-column">
+      <i class="fas fa-star"></i>
+      <div class="service-content">
+        <h3>Special Orders</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque efficitur tortor quis hendrerit volutpat. Etiam ut pellentesque mauris. Sed ligula turpis, scelerisque at blandit eget, pulvinar non velit. </p>
+        <button role="button" class="btn">Learn More</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="new-release-section">
+    <div class="new-release-header">
+      <h2>New Releases</h2>
+    </div>
+    <div class="new-release-column comic-column">
+      <div class="new-release-column-header">
+        <h3>Comics</h3>
+        <h4>Week of August 29, 2018</h4>
+      </div>
+      <div class="new-release-content">
+        <a href="#" class="new-release-item comic">
+          <img src="images/comic-1.jpg">
+          <div class="new-release-desc">
+            <h4>Nightwing Annual #1</h4>
+            <h5>DC Comics</h5>
+          </div>
+        </a>
+        <a href="#" class="new-release-item comic">
+          <img src="images/comic-2.jpg">
+          <div class="new-release-desc">
+            <h4>Ms. Marvel #33</h4>
+            <h5>Marvel Comics</h5>
+          </div>
+        </a>
+        <a href="#" class="new-release-item">
+          <img src="images/comic-1.jpg">
+          <div class="new-release-desc">
+            <h4>Nightwing Annual #1</h4>
+            <h5>DC Comics</h5>
+          </div>
+        </a>
+        <a href="#" class="new-release-item">
+          <img src="images/comic-2.jpg">
+          <div class="new-release-desc">
+            <h4>Ms. Marvel #33</h4>
+            <h5>Marvel Comics</h5>
+          </div>
+        </a>
+      </div>
+      <button class="btn">More New Release Comics</button>
+    </div>
+
+
+    <div class="new-release-column">
+      <div class="new-release-column-header">
+        <h3>Music</h3>
+        <h4>Week of August 29, 2018</h4>
+      </div>
+      <div class="new-release-content">
+        <a href="#" class="new-release-item">
+          <img src="images/music-1.jpg">
+          <div class="new-release-desc">
+            <h4>Rainier Fog</h4>
+            <h5>Alice in Chains</h5>
+          </div>
+        </a>
+        <a href="#" class="new-release-item">
+          <img src="images/music-2.jpg">
+          <div class="new-release-desc">
+            <h4>X</h4>
+            <h5>Interpol</h5>
+          </div>
+        </a>
+        <a href="#" class="new-release-item">
+          <img src="images/music-1.jpg">
+          <div class="new-release-desc">
+            <h4>Rainier Fog</h4>
+            <h5>Alice in Chains</h5>
+          </div>
+        </a>
+        <a href="#" class="new-release-item">
+          <img src="images/music-2.jpg">
+          <div class="new-release-desc">
+            <h4>X</h4>
+            <h5>Interpol</h5>
+          </div>
+        </a>
+      </div>
+      <button class="btn">More New Release Music</button>
+    </div>
+  </div>
+
+  <div class="blog-section">
+    <div class="blog-header">
+      <h2>Recent Blog Posts</h2>
+    </div>
+    <div class="blog-container">
+      <div class="blog-post">
+        <div class="blog-post-header">
+          <a href="#" class="blog-post-header-heading"><h3>Music Review: "Rainier Fog" by Alice in Chains</h3></a>
+          <div class="blog-info">
+            <div class="blog-date">
+              <i class="far fa-calendar-alt"></i>
+              <a href="#">Aug 31, 2018</a>
+            </div>
+            <div class="blog-categories">
+              <i class="far fa-sticky-note"></i>
+              <a href="#">Music</a>,&nbsp;<a href="#">Review</a>
+            </div>
+          </div>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque efficitur tortor quis hendrerit volutpat. Etiam ut
+          pellentesque mauris. Sed ligula turpis, scelerisque at blandit eget, pulvinar non vel... <a href="#" class="blog-read-more">Read
+            more &raquo;</a></p>
+        <div class="blog-comments">
+          <i class="fas fa-comments"></i>
+          <a href="#">2 Comments</a>
+        </div>
+      </div>
+      <div class="blog-post">
+        <div class="blog-post-header">
+          <a href="#" class="blog-post-header-heading"><h3>Fairwell to Chesterfield</h3></a>
+          <div class="blog-info">
+            <div class="blog-date">
+              <i class="far fa-calendar-alt"></i>
+              <a href="#">Oct 01, 2018</a>
+            </div>
+            <div class="blog-categories">
+              <i class="far fa-sticky-note"></i>
+              <a href="#">Chesterfield</a>,&nbsp;<a href="#">Announcement</a>
+            </div>
+          </div>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque efficitur tortor quis hendrerit volutpat. Etiam ut
+          pellentesque mauris. Sed ligula turpis, scelerisque at blandit eget, pulvinar non vel... <a href="#" class="blog-read-more">Read
+            more &raquo;</a></p>
+        <div class="blog-comments">
+          <i class="fas fa-comments"></i>
+          <a href="#">0 Comments</a>
+        </div>
+      </div>
+      <div class="blog-post">
+        <div class="blog-post-header">
+          <a href="#" class="blog-post-header-heading"><h3>Store Spotlight: Mid Rivers</h3></a>
+          <div class="blog-info">
+            <div class="blog-date">
+              <i class="far fa-calendar-alt"></i>
+              <a href="#">Sept 20, 2018</a>
+            </div>
+            <div class="blog-categories">
+              <i class="far fa-sticky-note"></i>
+              <a href="#">Store Spotlight</a>,&nbsp;<a href="#">Mid Rivers</a>
+            </div>
+          </div>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque efficitur tortor quis hendrerit volutpat.</p>
+        <div class="blog-comments">
+          <i class="fas fa-comments"></i>
+          <a href="#">15 Comments</a>
+        </div>
+      </div>
+    </div>
+    <div class="btn-container">
+      <button class="btn">All Blog Posts</button>
+    </div>
+  </div>
+
+  <div class="events-section">
+    <div class="events-header">
+      <h2>Upcoming Events</h2>
+    </div>
+    <a href="#" class="event-item active-event">
+      <div class="event-date">
+        <p class="day">05</p>
+        <p class="month">May</p>
+      </div>
+      <p class="event-title">Free Comic Book Day 2018</p>
+    </a>
+    <a href="#" class="event-item">
+      <div class="event-date">
+        <p class="day">01</p>
+        <p class="month">Dec</p>
+      </div>
+      <p class="event-title">Holiday Hours</p>
+    </a>
+    <a href="#" class="event-item">
+      <div class="event-date">
+        <p class="day">27</p>
+        <p class="month">Feb</p>
+      </div>
+      <p class="event-title">Tabletop Friday @ O'Fallon</p>
+    </a>
+    <a href="#" class="event-item">
+      <div class="event-date">
+        <p class="day">27</p>
+        <p class="month">Feb</p>
+      </div>
+      <p class="event-title">Tabletop Friday @ O'Fallon</p>
+    </a>
+    <a href="#" class="event-item">
+      <div class="event-date">
+        <p class="day">27</p>
+        <p class="month">Feb</p>
+      </div>
+      <p class="event-title">Tabletop Friday @ O'Fallon</p>
+    </a>
+    <div class="btn-container">
+      <button class="btn">All Upcoming Events</button>
+    </div>
+  </div>
+
+  <div class="locations-section">
+    <div class="locations-header">
+      <h2>Locations</h2>
+    </div>
+    <div class="locations-slider">
+      <div class="location-item">
+        <h4>Mid Rivers</h4>
+        <div class="location-address">
+          <i class="fas fa-map-marker-alt"></i>
+          <a href="#">2300 Mid Rivers Mall<br>St. Peters, MO 63376</a>
+        </div>
+        <div class="location-tel">
+          <i class="fas fa-phone"></i>
+          <a href="tel:#">636-397-0897</a>
+        </div>
+        <button class="btn">View Store Site</button>
+      </div>
+
+      <div class="location-item">
+        <h4>O'Fallon</h4>
+        <div class="location-address">
+          <i class="fas fa-map-marker-alt"></i>
+          <a href="#">2437 Highway K<br>O’Fallon, MO 63368</a>
+        </div>
+        <div class="location-tel">
+          <i class="fas fa-phone"></i>
+          <a href="tel:#">636-240-9237</a>
+        </div>
+        <button class="btn">View Store Site</button>
+      </div>
+
+      <div class="location-item">
+        <h4>St. Charles</h4>
+        <div class="location-address">
+          <i class="fas fa-map-marker-alt"></i>
+          <a href="#">2432 West Clay Street<br>St. Charles, MO 63301</a>
+        </div>
+        <div class="location-tel">
+          <i class="fas fa-phone"></i>
+          <a href="tel:#">636-946-5200</a>
+        </div>
+        <button class="btn">View Store Site</button>
+      </div>
+
+      <div class="location-item">
+        <h4>St. Charles</h4>
+        <div class="location-address">
+          <i class="fas fa-map-marker-alt"></i>
+          <a href="#">2432 West Clay Street<br>St. Charles, MO 63301</a>
+        </div>
+        <div class="location-tel">
+          <i class="fas fa-phone"></i>
+          <a href="tel:#">636-946-5200</a>
+        </div>
+        <button class="btn">View Store Site</button>
+      </div>
+
+      <div class="location-item">
+        <h4>St. Charles</h4>
+        <div class="location-address">
+          <i class="fas fa-map-marker-alt"></i>
+          <a href="#">2432 West Clay Street<br>St. Charles, MO 63301</a>
+        </div>
+        <div class="location-tel">
+          <i class="fas fa-phone"></i>
+          <a href="tel:#">636-946-5200</a>
+        </div>
+        <button class="btn">View Store Site</button>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="connect-container">
+    <div class="social-media-section">
+      <h3>Connect with Slackers</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="enews-section">
+      <h3>Slackattack eNews!</h3>
+      <form class="enews-form">
+        <input name="firstname" type="text" placeholder="First Name">
+        <input name="lastname" type="text" placeholder="Last Name">
+        <input name="email" type="text" placeholder="Email">
+        <div class="submit-container">
+          <input name="submit" type="submit" value="Sign Up">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-section">
+      <div class="sitemap-section">
+        <div class="main-sitemap-item sitemap-item">
+          <h4>Site Map</h4>
+          <a href="#">Online Store</a>
+          <a href="#">Services</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="policy-sitemap-item sitemap-item">
+          <h4>Support & Policies</h4>
+          <a href="#">Buy, Sell, Trade</a>
+          <a href="#">Special Orders</a>
+          <a href="#">Returns & Exchanges</a>
+          <a href="#" class="talk-to-slackers">Talk to Slackers</a>
+        </div>
+      </div>
+      <hr>
+      <div class="apply-section">
+        <h4>Apply Today!</h4>
+        <p>Are you a hard-working, dedicated, organized slacker?</p>
+        <button class="btn">Join the Team</button>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2018 Slackers. All rights reserved.</p>
+  </footer>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+// Third Party Packages
+@import "third-party/normalize.css";
+@import "third-party/bootstrap.min.css";
+@import "third-party/slick.css";
+@import "third-party/animate.min.css";
+
+// Sass & HTML global selectors/classes
+@import "base/variables";
+@import "base/mixins";
+@import "base/base";
+
+// Landing Page Modules
+@import "modules/header";
+@import "modules/main-carousel";
+@import "modules/product-section";
+@import "modules/service-section";
+@import "modules/new-release-section";
+@import "modules/blog-section";
+@import "modules/events-section";
+@import "modules/location-section";
+@import "modules/connect-section";
+@import "modules/footer";

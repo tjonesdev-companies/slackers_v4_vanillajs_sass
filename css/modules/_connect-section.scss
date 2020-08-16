@@ -1,0 +1,121 @@
+.connect-container {
+  background-color: $primary-color;
+  color: white;
+  padding: 2.5em 1em;
+  @include flex($dir: column, $align: center, $justify: center);
+
+  .social-media-section {
+    padding-bottom: 2em;
+    @include flex($dir: column, $align: center, $justify: center);
+
+    h3 {
+      text-align: center;
+      padding-bottom: 1em;
+    }
+    .social-icons {
+      @include flex;
+
+      a {
+        margin: 0 .5em;
+        color: white;
+
+        i {
+          font-size: 2.5em;
+          width: 1.5em;
+          height: 1.5em;
+          border-radius: 25% 25%;
+          @include flex($align: center, $justify: center);
+
+          &:hover {
+            color: $primary-color;
+            background-color: white;
+          }
+        }
+      }
+    }
+  }
+  hr {
+    width: 85%;
+    height: 1px;
+    background-color: white;
+  }
+  .enews-section {
+    padding-top: 2em;
+    width: 100%;
+    @include flex($dir: column, $align: center, $justify: center);
+
+    h3 {
+      text-align: center;
+      padding-bottom: 1em;
+    }
+    .enews-form {
+      width: 100%;
+      @include flex($dir: column, $align: center, $justify: center);
+
+      input[type=text] {
+        width: 80%;
+        padding: 1em;
+        margin-bottom: .75em;
+        border: none;
+        box-shadow: 0 1px 2px 0 $text__dark;
+      }
+      input[type=submit] {
+        padding: .5em 2em;
+        color: white;
+        background-size: 200% auto;
+        background-image: linear-gradient(to right, lighten($secondary-color, 5%) 0%, lighten($secondary-color, 12%) 51%, lighten($secondary-color, 5%) 100%);
+        cursor: pointer;
+        margin: 1em 0;
+        font-family: $subheading-font;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        border: none;
+        transition: 0.5s;
+        box-shadow: 0 1px 2px 0 darken($primary-color, 15%);
+
+        &:hover {
+          background-position: right center;
+        }
+      }
+    }
+  }
+  @include medium-devices {
+    padding: 4em 6em 6em 6em;
+
+    hr {
+      width: 100%;
+    }
+
+    .enews-section {
+      h3 {
+        padding-bottom: 1.5em;
+      }
+      .enews-form {
+        @include flex($dir: row, $align: center, $justify: center, $wrap: wrap);
+
+        input[type=text] {
+          padding: 1em;
+          margin-bottom: .75em;
+        }
+        input[name=firstname] {
+          width: 45%;
+          margin-right: 3%;
+        }
+        input[name=lastname] {
+          width: 45%;
+        }
+        input[name=email] {
+          width: 93%;
+          margin-top: .5em;
+        }
+        .submit-container {
+          width: 100%;
+          @include flex($justify: center);
+        }
+      }
+    }
+  }
+  @include large-devices {
+
+  }
+}
