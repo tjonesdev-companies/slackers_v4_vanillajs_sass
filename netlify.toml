@@ -1,0 +1,6 @@
+
+[[redirects]]
+from = "https://tjonesdev-slackers.netlify.app"
+to = "https://slackers.tjonesdev.com"
+status = 301
+force = true
